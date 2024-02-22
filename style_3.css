@@ -1,0 +1,42 @@
+:root   {
+    --black: #0000ff;
+}
+
+
+body {
+    background-image: url("../../graphics/art8.jpg");
+    font-size: 2em;
+}
+
+div {
+
+    background-color: var(--black);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+
+
+}
+
+
+div.new_div {
+    background-color: ivory;
+    border-radius: 25px;
+    width: 50%;
+}
+
+div#inside_1 { 
+    background-color: coral;
+
+}
+
+
+#link1 {
+    font-size: 3em;
+    background-color: black;
+    color: white;
+}
+
+#men {
+    border-radius: 25px;
+}
