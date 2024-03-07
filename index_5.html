@@ -1,0 +1,69 @@
+<!-- Name: Elizabeth Medalla -->
+<!-- Date: February 14, 2023 -->
+<!-- Asignment: Part 0.26 -->
+<!-- Course: ITSE 1311.001 -->
+
+<!DOCTYPE html>
+<!-- created for web dev course, jac -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Range Control</title>
+
+    <style>
+        input {
+            font-size: 4em;
+            background-color: hotpink;
+        }
+
+        input[type="range"] {
+            font-size: 6em;
+            width: 50%;
+            background-color: ivory;
+        }
+    </style>
+    <script>
+        function updateRange(val) {
+            // perhaps put in a check or valid (val) number type
+            document.getElementById("output").value = val;
+            console.log(`updateRange val:${val}`);
+        };
+
+
+        function updateText(val) {
+            let val2 = parseInt(val);
+            if (typeof val2 === "number") {
+                document.getElementById("range_1").value = val2;
+
+            } else {
+                document.getElementById("output").value = "Not number"
+            }
+            console.log(`updateText val:${val2}`);
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Input Range Control</h1>
+        <hr />
+    </header> 
+    <br />
+    <input type="range" id="range_1" name="a_range" min="10" max="1000" step="20" value="200" onchange="updateRange(this.value);" />
+
+    <br />
+    <br />
+    <input type="text" id="output" size="4" value="" placeholder="output" onchange="updateText(this.value);" />
+    <br>
+    <br>
+    <pre>
+    With Great Power
+    Comes Great Responsibility
+    Pancho Pacho  
+   </pre>
+</body>
+
+</html>
